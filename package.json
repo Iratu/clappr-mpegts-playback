@@ -1,6 +1,6 @@
 {
-  "name": "Iratu-clappr-mpegts-playback",
-  "version": "0.0.1",
+  "name": "clappr-mpegts-playback",
+  "version": "0.0.2",
   "description": "MpegtTS/FLV Playback based on mpegts.js",
   "main": "./dist/clappr-mpegts-playback.js",
   "module": "./dist/clappr-mpegts-playback.esm.js",
@@ -50,7 +50,7 @@
     "coveralls": "^3.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.18.2",
-    "mpegts.js": "^1.6.0",
+    "mpegts.js": "^1.6.5",
     "jest": "^26.0.1",
     "rollup": "^2.15.0",
     "rollup-plugin-filesize": "^9.0.0",

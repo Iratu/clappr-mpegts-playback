@@ -56,7 +56,7 @@ const mainBundleWithoutHLS = {
     name: 'MpegtsJSPlayback',
     file: 'dist/clappr-mpegts-playback.external.js',
     format: 'umd',
-    globals: { '@clappr/core': 'Clappr', 'mpegts.js': 'Hls' },
+    globals: { '@clappr/core': 'Clappr', 'mpegts.js': 'mpegts' },
   },
   plugins,
 }
@@ -79,7 +79,7 @@ const mainBundleWithoutHLSMinified = {
   output: {
     name: 'MpegtsJSPlayback',
     file: 'dist/clappr-mpegts-playback.external.min.js',
-    globals: { '@clappr/core': 'Clappr', 'mpegts.js': 'Hls' },
+    globals: { '@clappr/core': 'Clappr', 'mpegts.js': 'mpegts' },
     format: 'iife',
     sourcemap: true,
     plugins: terser(),
