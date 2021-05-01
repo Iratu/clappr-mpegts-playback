@@ -64,17 +64,23 @@ export default class MpegtsJSPlayback extends HTML5Video {
   }
 
   _onError (type, details, data) {
-    Log.error(`mpegts: ${type}: ${details}`, data)
+    if(this.options.playback.hlsFallback)
+    {
+      this._player.configure({ source: this.options.playback.hlsFallback, mimeType: "video/hls" })
+    } else 
+      {
+        Log.error(`mpegts: ${type}: ${details}`, data)
 
-    const formattedError = this.createError({
-      code: data.code || type,
-      description: data.msg || details,
-      raw: data,
-      level: PlayerError.Levels.FATAL
-    })
+        const formattedError = this.createError({
+        code: data.code || type,
+        description: data.msg || details,
+        raw: data,
+        level: PlayerError.Levels.FATAL
+        })
 
-    this.trigger(Events.PLAYBACK_ERROR, formattedError)
-    this.stop()
+        this.trigger(Events.PLAYBACK_ERROR, formattedError)
+        this.stop()
+      }
   }
 
   _destroy () {
