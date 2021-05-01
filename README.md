@@ -14,3 +14,5 @@ Build this with Yarn,
 `yarn install`
 `yarn build`
 `yarn release`
+
+Based on: https://github.com/andrefilimono/clappr-flvjs-playback
