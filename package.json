@@ -1,6 +1,6 @@
 {
   "name": "clappr-mpegts-playback",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "MpegtTS/FLV Playback based on mpegts.js",
   "main": "./dist/clappr-mpegts-playback.js",
   "module": "./dist/clappr-mpegts-playback.esm.js",

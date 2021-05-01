@@ -66,7 +66,7 @@ export default class MpegtsJSPlayback extends HTML5Video {
   _onError (type, details, data) {
     if(this.options.playback.hlsFallback)
     {
-      this._player.configure({ source: this.options.playback.hlsFallback, mimeType: "video/hls" })
+      this.configure({ source: this.options.playback.hlsFallback, mimeType: "video/hls" })
     } else 
       {
         Log.error(`mpegts: ${type}: ${details}`, data)
